@@ -172,6 +172,7 @@ const completeTask = async (userId, id, actualTime) => {
 
     const task = taskResult.rows[0];
 
+    console.log(task);
     // Simpan ke history
     const historyResult = await client.query(
       `
