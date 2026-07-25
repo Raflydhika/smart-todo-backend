@@ -18,6 +18,13 @@ app.use(express.json());
 app.use('/auth', authRoutes);
 app.use('/task', routes);
 
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: 'Smart To-Do Backend API is running',
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
